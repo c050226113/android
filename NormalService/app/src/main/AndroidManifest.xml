@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ljm.normalservice" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+         <!--配置Service组件,同时配置一个action -->
+        <service android:name=".TestService1">
+            <intent-filter>
+                <action android:name="com.jay.example.service.TEST_SERVICE1"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+
+
+</manifest>
